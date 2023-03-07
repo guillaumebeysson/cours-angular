@@ -17,6 +17,9 @@
 <h2>Liste des personnes</h2>
 <div id="formResponse">
   <ol>
-    <li *ngFor="let p of personnes">{{p.nom}} {{p.prenom}} <button (click)="supprimerPersonne(p.num)"><i class="fa-solid fa-trash-can"></i></button></li>
+    <li *ngFor="let p of personnes">{{p.nom}} {{p.prenom}} 
+      <button (click)="supprimerPersonne(p.num)"><i class="fa-solid fa-trash-can"></i></button>
+      <a [routerLink]="['/personne-details', p.num]"><i class="fa-regular fa-pen-to-square"></i></a>
+    </li>
   </ol>
 </div>

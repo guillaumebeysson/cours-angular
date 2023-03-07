@@ -7,7 +7,9 @@ import { PersonneComponent } from './components/personne/personne.component';
 const routes: Routes = [
   { path: "personne", component: PersonneComponent },
   { path: "personne-reactive", component: PersonneReactiveComponent },
-  { path: "observable", component: ObservableComponent }
+  { path: "observable", component: ObservableComponent },
+  { path: "personne-details/:num", component: PersonneComponent }
+
 ];
 
 @NgModule({

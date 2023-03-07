@@ -7,14 +7,16 @@ import { PersonneComponent } from './components/personne/personne.component';
 import { ObservableComponent } from './components/observable/observable.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
-import { PersonneReactiveComponent } from './components/personne-reactive/personne-reactive.component'
+import { PersonneReactiveComponent } from './components/personne-reactive/personne-reactive.component';
+import { PersonneDetailsComponent } from './components/personne-details/personne-details.component'
 
 @NgModule({
   declarations: [
     AppComponent,
     PersonneComponent,
     ObservableComponent,
-    PersonneReactiveComponent
+    PersonneReactiveComponent,
+    PersonneDetailsComponent
   ],
   imports: [
     BrowserModule,
