@@ -1,0 +1,57 @@
+h2{
+    text-align: center;
+}
+#formPersonne{
+    display: flex;
+    flex-direction: column;
+    margin: 10px auto;
+    width: 280px;
+    font-size: larger;
+}
+#formPersonne div{
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 10px 0;
+}
+#formPersonne input{
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+#formPersonne button{
+    margin: 20px auto;
+    padding: 10px;
+    background-color: rgb(83, 182, 83);
+    border: solid 1px rgb(83, 182, 83);
+    border-radius: 30px;
+    color: #ffffff;
+    font-size: large;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    width: 200px;
+}
+#formPersonne button:hover{
+    border: solid 1px rgb(83, 182, 83);
+    color: rgb(83, 182, 83);
+    background-color: #ffffff;
+    cursor: pointer;
+}
+#formPersonne button:disabled{
+    background-color: rgba(83, 182, 83, 0.337);
+    border: solid 1px #ffffff;
+}
+
+.ng-invalid:not(form) {
+    border: 1px red solid;
+}
+.ng-valid:not(form) {
+    border: 1px rgb(83, 182, 83) solid;
+}
+
+
+
