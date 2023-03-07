@@ -1,0 +1,37 @@
+<h2>Formulaire réactif</h2>
+
+<form [formGroup]="personneForm">
+    <div>
+        <label for="nom">Nom</label>
+        <input type="text" id="nom" formControlName="nom">
+        <span *ngIf="personneForm.controls.nom.errors" class="text-danger">
+            <span *ngIf="personneForm.controls.nom.errors['required']">
+                Le nom est obligatoire
+            </span>
+            <span *ngIf="personneForm.controls.nom.errors['pattern']">
+                Le nom doit commencer par une majuscule et contenir entre 2 et 20 caractères
+            </span> 
+        </span> 
+    </div>
+    <div>
+        <label for="prenom">Prénom</label>
+        <input type="text" id="prenom" formControlName="prenom">
+        <span *ngIf="personneForm.controls.prenom.errors" class="text-danger">
+            <span *ngIf="personneForm.controls.prenom.errors['required']">
+                Le prenom est obligatoire
+            </span>
+            <ng-template #message>
+                <span>
+                   {{ personneForm.controls.prenom.errors['message'] }}
+                </span>
+            </ng-template>
+        </span> 
+    </div>
+</form>
+<ul>
+    <li *ngFor="let p of personnes">{{p.nom}} {{p.prenom}}</li>
+</ul>
+
+<button [disabled]="personneForm.invalid" (click)="ajouterPersonne()">
+    Ajouter
+</button>

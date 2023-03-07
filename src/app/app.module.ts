@@ -5,20 +5,23 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { PersonneComponent } from './components/personne/personne.component';
 import { ObservableComponent } from './components/observable/observable.component';
-import { FormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http'
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import { PersonneReactiveComponent } from './components/personne-reactive/personne-reactive.component'
 
 @NgModule({
   declarations: [
     AppComponent,
     PersonneComponent,
-    ObservableComponent
+    ObservableComponent,
+    PersonneReactiveComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

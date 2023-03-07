@@ -16,7 +16,6 @@ export class PersonneComponent implements OnInit{
   ngOnInit(): void {
     this.ps.getPersonnes().subscribe({
       next: value => {
-        
         this.personnes = value;
       },
       error: (erreur) => {
@@ -36,6 +35,17 @@ export class PersonneComponent implements OnInit{
         alert("Problème d'insertion")
       }
     })
-    
+  }
+  supprimerPersonne(num:number = 0){
+    this.ps.removePersonne(num).subscribe( {
+      next: () => {
+        //alert("Suppression effectuée avec succès")
+        let indice = this.personnes.findIndex(elt => elt.num == num)
+        this.personnes.splice(indice, 1);
+      },
+      error: (erreur) => {
+        alert("Problème de suppression")
+      }
+    })
   }
 }

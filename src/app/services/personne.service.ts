@@ -20,4 +20,7 @@ export class PersonneService {
   addPersonne(p: Personne){
     return this.http.post<Personne>(this.url, p);
   }
+  removePersonne(id:number){
+    return this.http.delete(`${this.url}/${id}`);
+  }
 }
