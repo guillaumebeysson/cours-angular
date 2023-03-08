@@ -1,11 +1,6 @@
-<div class="container">
+<app-menu></app-menu>
+<app-header></app-header>
 
-    <h1>Bienvenue dans {{title}}</h1>
-    <hr>
-    
-    <router-outlet></router-outlet>
-    
-    <p [textContent]="title"></p>
-    <p>{{title}}</p>
-    <button (click)="direBonjour()">direBonjour</button>
+<div class="container">
+  <router-outlet></router-outlet>
 </div>

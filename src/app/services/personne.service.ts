@@ -23,4 +23,7 @@ export class PersonneService {
   removePersonne(id:number){
     return this.http.delete(`${this.url}/${id}`);
   }
+  updatePersonne(p: Personne){
+    return this.http.put<Personne>(`${this.url}/${p.num}`, p);
+  }
 }

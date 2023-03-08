@@ -19,13 +19,6 @@ export class PersonneReactiveComponent implements OnInit {
     ])
   })
 
-  /*
-this.fb.group({
-      rue: [""],
-      ville: [""],
-      codePostal: [""]
-    })
-  */
   constructor(private ps: PersonneService, private fb: FormBuilder) { }
   ngOnInit(): void {
     this.ps.getPersonnes().subscribe(value => {

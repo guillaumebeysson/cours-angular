@@ -1,0 +1,12 @@
+<h2>Modifier</h2>
+<form [formGroup]="personneForm" (ngSubmit)="enregistrer()">
+  <div class="m-2">
+    <label for="nom">Nom</label>
+    <input type="text" formControlName="nom">
+  </div>
+  <div class="m-2">
+    <label for="prenom">prenom</label>
+    <input type="text" formControlName="prenom">
+  </div>
+  <button class="btn btn-success">Enregistrer</button>
+</form>
