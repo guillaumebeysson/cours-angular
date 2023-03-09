@@ -1,0 +1,15 @@
+<h1 class="text-center">Connexion</h1>
+<form action="" class="text-center">
+  <div>
+    <label for="username">username</label>
+    <input type="text" name="username" id="username" placeholder="username" [(ngModel)]="user.username">
+  </div>
+  <div>
+    <label for="">password</label>
+    <input type="password" name="password" id="password" placeholder="password" [(ngModel)]="user.password">
+  </div>
+  <button (click)="connexion()" class="btn btn-success">se connecter</button>
+  <div class="alert alert-danger" *ngIf="erreur">
+    {{ erreur }}
+  </div>
+</form>

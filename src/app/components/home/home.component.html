@@ -1,3 +1,38 @@
+<h1 class="text-center">Exemples</h1>
 <p [textContent]="title"></p>
-<p>{{title}}</p>
+<p>{{title | uppercase}}</p>
 <button (click)="direBonjour()">direBonjour</button>
+<br>
+<br>
+<h2>Utilité des pipe:</h2>
+<p>
+  {{ title }}
+  {{ maDate | date:"dd MMMM yyyy" | uppercase }}
+</p>
+<p>
+  {{ formation | json}}
+</p>
+<ul>
+  <li *ngFor="let elt of tableau">
+    {{ elt }}
+  </li>
+</ul>
+<ul>
+  <li *ngFor="let elt of formation | keyvalue">
+    {{ elt | json }}
+  </li>
+</ul>
+<ul>
+  <li *ngFor="let elt of formation|keyvalue">
+    {{ elt.key }} {{ elt.value }}
+  </li>
+</ul>
+<h3>Pipe personnalisés</h3>
+<p>{{ title | getchar }}</p>
+<p>{{ title | getchar:2 }}</p>
+
+<ul>
+  <li *ngFor="let n of tableau | evenvalue">
+    {{ n }}
+  </li>
+</ul>

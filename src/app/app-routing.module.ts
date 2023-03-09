@@ -1,16 +1,11 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { AuthComponent } from './components/auth/auth.component';
 import { HomeComponent } from './components/home/home.component';
-import { ObservableComponent } from './modules/cours/observable/observable.component';
-import { PersonneDetailsComponent } from './modules/cours/personne-details/personne-details.component';
-import { PersonneReactiveDetailsComponent } from './modules/cours/personne-reactive-details/personne-reactive-details.component';
-import { PersonneReactiveComponent } from './modules/cours/personne-reactive/personne-reactive.component';
-import { PersonneComponent } from './modules/cours/personne/personne.component';
-import { CamionComponent } from './modules/vehicule/camion/camion.component';
-import { VoitureComponent } from './modules/vehicule/voiture/voiture.component';
 
 const routes: Routes = [
   { path: "", component: HomeComponent },
+  { path: "auth", component: AuthComponent },
   { path: 'vehicule', 
     loadChildren: () => import('./modules/vehicule/vehicule.module')
     .then(m => m.VehiculeModule)
