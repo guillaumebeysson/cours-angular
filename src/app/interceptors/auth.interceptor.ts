@@ -14,7 +14,7 @@ export class AuthInterceptor implements HttpInterceptor {
   constructor() {}
 
   intercept(request: HttpRequest<unknown>, next: HttpHandler): Observable<HttpEvent<unknown>> {
-    if (request.url != 'htpp://localhost:8080/ws/auth'){
+    if (request.url != 'http://localhost:8080/ws/auth'){
       const user: User = JSON.parse(localStorage.getItem('user') ?? "")
       const usernameAndPassword = user.username + ':' + user.password;
       request = request.clone({

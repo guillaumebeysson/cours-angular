@@ -19,7 +19,7 @@ export class AuthComponent{
         localStorage.setItem("user", JSON.stringify(result))
         this.router.navigateByUrl("/")
       },
-      error: () => this.erreur = "identifiants incorrects"
+      error: (e) => this.erreur = "identifiants incorrects"+ e
     })
   }
 
